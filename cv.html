@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CV | Nithin Kumar</title>
+    <meta name="author" content="Nithin Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="theme.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ============ NAVIGATION ============ -->
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <span class="nav-current">CV</span>
+
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Switch theme">
+            ☾
+        </button>
+    </div>
+
+
+    <!-- ============ PAGE CONTENT ============ -->
+    <div class="page-container">
+
+        <h1>Curriculum Vitae</h1>
+
+        <p>
+            My current CV is available as a PDF.
+        </p>
+
+        <p>
+            <a href="data/cv.pdf" target="_blank">
+                View / Download CV
+            </a>
+        </p>
+
+
+
+    </div>
+
+</body>
+
+</html>

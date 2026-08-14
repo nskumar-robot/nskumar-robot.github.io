@@ -3,14 +3,37 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Your Name</title>
-  <meta name="author" content="Your Name">
+  <title>Nithin Kumar</title>
+  <meta name="author" content="Nithin Kumar">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  </script>
+
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" href="images/favicon.ico">
+  <script src="theme.js" defer></script>
 </head>
 
 <body>
+  <!-- ============ NAVIGATION ============ -->
+  <div class="nav">
+    <span class="nav-current">Home</span>
+    <a href="publications.html">Publications</a>
+    <a href="cv.html">CV</a>
+
+    <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Switch theme">
+      ☾
+    </button>
+  </div>
   <table
     style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tbody>
@@ -24,14 +47,14 @@
             <tbody>
               <tr style="padding:0px">
 
-                <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <td style="padding:0%;width:63%;vertical-align:middle">
                   <p style="text-align:center">
                     <name>Nithin Kumar</name>
                   </p>
                   <p>
                     I am a PhD student in Mechanical Engineering at
                     <a href="https://www.vanderbilt.edu">Vanderbilt University</a>, where I work with
-                    <a href="https://engineering.vanderbilt.edu/bio/eric-barth/">Prof. Eric Barth</a>.
+                    <a href="https://engineering.vanderbilt.edu/bio/eric-barth/">Prof. Eric J. Barth</a>.
                     I develop models and controllers that make highly compliant, underactuated robots
                     move accurately and dynamically in real time &mdash; combining first-principles
                     mechanics with data-driven system identification, and validating everything on
@@ -47,17 +70,24 @@
                     interaction in unstructured environments.
                   </p>
                   <p>
-                    I hold an S.M. in Mechanical Engineering from <a href="https://www.mit.edu">MIT</a>, M.S. in Robotics Engineering from <a href="https://www.wpi.edu/">WPI</a>,
+                    I hold an S.M. in Mechanical Engineering from <a href="https://www.mit.edu">MIT</a>, M.S. in
+                    Robotics Engineering from <a href="https://www.wpi.edu/">WPI</a>,
                     and a B.E. in Mechanical Engineering from Vanderbilt University.
                   </p>
                   <p style="text-align:center">
                     <a href="mailto:nithin.s.kumar@vanderbilt.edu">Email</a> &nbsp;/&nbsp;
-                    <a href="data/cv.pdf">CV</a> &nbsp;/&nbsp;
                     <a
                       href="https://scholar.google.com/citations?hl=en&user=lIwMSlUAAAAJ&view_op=list_works&sortby=pubdate">Google
                       Scholar</a> &nbsp;/&nbsp;
                     <a href="https://www.linkedin.com/in/nithin-s-kumar/">LinkedIn</a>
                   </p>
+                </td>
+
+                <td style="padding:2.5%;width:37%;max-width:37%">
+                  <a href="images/nithin.jpg">
+                    <img src="images/nithin.jpg" alt="Nithin Kumar"
+                      style="width:100%;max-width:100%;object-fit:cover;border-radius:8px;">
+                  </a>
                 </td>
 
               </tr>
@@ -71,95 +101,317 @@
       <tr style="padding:0px">
         <td style="padding:0px">
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <table class="research-table">
             <tbody>
 
               <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Research</heading>
-                  <p>
-                    Representative work. * denotes equal contribution.
-                  </p>
+                <td colspan="2" class="section-header">
+                  <div class="section-title-row">
+                    <h2>Selected Publications</h2>
+                    <a href="publications.html">Full List</a>
+                  </div>
                 </td>
               </tr>
 
-              <!-- ---- PAPER 1 (copy this whole <tr> block per paper) ---- -->
-              <tr onmouseout="paper1_stop()" onmouseover="paper1_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle;min-width:120px">
-                  <div class="one">
+              <!-- ---- PAPER 1: Control-Oriented Learning ---- -->
+              <tr>
+
+                <td class="research-image">
+
+                  <div class="one" onmouseout="paper1_stop()" onmouseover="paper1_start()">
+
                     <div class="two" id="paper1_image">
-                      <img src="images/paper1_after.jpg" alt="paper1" width="160">
+                      <img src="images/3d_pneum_after.gif" alt="Control-oriented learning for soft pneumatic actuators"
+                        width="300" height="300">
                     </div>
-                    <img src="images/paper1_before.jpg" alt="paper1" width="160">
+
+                    <img src="images/3d_pneum_before_v2.jpg"
+                      alt="Control-oriented learning for soft pneumatic actuators" width="300" height="300">
+
                   </div>
+
                   <script type="text/javascript">
                     function paper1_start() {
                       document.getElementById('paper1_image').style.opacity = "1";
                     }
+
                     function paper1_stop() {
                       document.getElementById('paper1_image').style.opacity = "0";
                     }
-                    paper1_stop()
+
+                    paper1_stop();
                   </script>
+
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
-                  <a href="https://arxiv.org/abs/XXXX.XXXXX">
-                    <papertitle>Paper Title Goes Here</papertitle>
+
+                <td class="research-text">
+
+                  <a href="#">
+                    <papertitle>
+                      Control-Oriented Learning for Dynamic Tracking and Stability Analysis of Soft Pneumatic Actuators
+                    </papertitle>
                   </a>
+
                   <br>
-                  <strong>Your Name</strong>,
-                  Coauthor One,
-                  Coauthor Two
+
+                  <strong>Nithin S. Kumar</strong>,
+                  Eric J. Barth
+
                   <br>
-                  <em>Conference or Journal</em>, 2025
+
+                  <em>IEEE Robotics and Automation Letters (RA-L)</em>, [Year]
+
                   <br>
-                  <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv</a> /
-                  <a href="data/paper1.pdf">pdf</a> /
-                  <a href="https://github.com/nskumar-robot/paper1">code</a> /
-                  <a href="https://youtube.com/XXXX">video</a>
+
+                  <a href="#">paper</a> /
+                  <a href="#">arXiv</a> /
+                  <a href="#">code</a> /
+                  <a href="#">video</a>
+
                   <p>
-                    One or two sentences describing the contribution in plain language.
+                    A data-driven modeling and control framework for dynamic trajectory
+                    tracking of soft pneumatic actuators, combining learned dynamics with
+                    feedback control and closed-loop stability analysis.
                   </p>
+
                 </td>
+
               </tr>
 
-              <!-- ---- PAPER 2 ---- -->
-              <tr onmouseout="paper2_stop()" onmouseover="paper2_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle;min-width:120px">
-                  <div class="one">
+
+              <!-- ---- PAPER 2: T-Mech Discrete Elastic Rod Control ---- -->
+              <tr>
+
+                <td class="research-image">
+                  <div class="one" onmouseout="paper2_stop()" onmouseover="paper2_start()">
+
                     <div class="two" id="paper2_image">
-                      <img src="images/paper2_after.jpg" alt="paper2" width="160">
+                      <img src="images/tmech_after.gif" alt="Discrete elastic rod control">
                     </div>
-                    <img src="images/paper2_before.jpg" alt="paper2" width="160">
+
+                    <img src="images/tmech_before.jpg" alt="Discrete elastic rod control">
                   </div>
+
                   <script type="text/javascript">
                     function paper2_start() {
                       document.getElementById('paper2_image').style.opacity = "1";
                     }
+
                     function paper2_stop() {
                       document.getElementById('paper2_image').style.opacity = "0";
                     }
-                    paper2_stop()
+
+                    paper2_stop();
                   </script>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
+
+                <td class="research-text">
                   <a href="#">
-                    <papertitle>Second Paper Title</papertitle>
+                    <papertitle>Task-space model-based control of pneumatic soft actuators</papertitle>
                   </a>
+
                   <br>
-                  Coauthor One,
-                  <strong>Your Name</strong>
+
+                  <strong>Nithin S. Kumar</strong>,
+                  Joshua Gaston, D. Caleb Rucker, Eric J. Barth
+
                   <br>
-                  <em>Venue</em>, 2024
+
+                  <em>IEEE/ASME Transactions on Mechatronics</em>, [Year]
+
                   <br>
+
+                  <a href="#">paper</a> /
                   <a href="#">arXiv</a> /
-                  <a href="#">code</a>
+                  <a href="#">code</a> /
+                  <a href="#">video</a>
+
                   <p>
-                    One or two sentences.
+                    [One-sentence description of the discrete-elastic-rod modeling and
+                    closed-loop control contribution.]
                   </p>
                 </td>
+
               </tr>
+
+              <!-- ---- PAPER 3: Wheeled Soft Robot ---- -->
+              <tr>
+
+                <td class="research-image">
+                  <div class="one" onmouseout="paper3_stop()" onmouseover="paper3_start()">
+
+                    <div class="two" id="paper3_image">
+                      <img src="images/jmr_after.gif" alt="Wheeled soft robot">
+                    </div>
+
+                    <img src="images/jmr_before.jpg" alt="Wheeled soft robot">
+                  </div>
+
+                  <script type="text/javascript">
+                    function paper3_start() {
+                      document.getElementById('paper3_image').style.opacity = "1";
+                    }
+
+                    function paper3_stop() {
+                      document.getElementById('paper3_image').style.opacity = "0";
+                    }
+
+                    paper3_stop();
+                  </script>
+                </td>
+
+                <td class="research-text">
+                  <a href="#">
+                    <papertitle>Constrained Lagrangian-Based, Nonholonomic Modeling and Validation of a Pneumatically
+                      Actuated Wheeled Soft Robot</papertitle>
+                  </a>
+
+                  <br>
+
+                  <strong>Nithin S. Kumar</strong>,
+                  John E. Peters, Sung Y. Kim, Joshua Gaston, D. Caleb Rucker, Eric J. Barth
+
+                  <br>
+
+                  <em>Journal of Mechanisms and Robotics</em>, [Year]
+
+                  <br>
+
+                  <a href="#">paper</a> /
+                  <a href="#">code</a> /
+                  <a href="#">video</a>
+
+                  <p>
+                    [One-sentence description of the wheeled soft robot modeling,
+                    control, and closed-loop tracking contribution.]
+                  </p>
+                </td>
+
+              </tr>
+
+              <!-- ---- PAPER 4: Data-Driven Soft Robot Control ---- -->
+              <tr>
+
+                <td class="research-image">
+                  <div class="one" onmouseout="paper4_stop()" onmouseover="paper4_start()">
+
+                    <div class="two" id="paper4_image">
+                      <img src="images/aldsc_after.gif" alt="Data-driven soft robot control">
+                    </div>
+
+                    <img src="images/aldsc_before.jpg" alt="Data-driven soft robot control">
+                  </div>
+
+                  <script type="text/javascript">
+                    function paper4_start() {
+                      document.getElementById('paper4_image').style.opacity = "1";
+                    }
+
+                    function paper4_stop() {
+                      document.getElementById('paper4_image').style.opacity = "0";
+                    }
+
+                    paper4_stop();
+                  </script>
+                </td>
+
+                <td class="research-text">
+                  <a href="#">
+                    <papertitle>Data-driven dynamic modeling and control of pneumatic soft actuators with stability
+                      analysis</papertitle>
+                  </a>
+
+                  <br>
+
+                  <strong>Nithin S. Kumar</strong>,
+                  John E. Peters, Thomas Beckers, Eric J. Barth
+
+                  <br>
+
+                  <em>American Control Conference / ALDSC / [Venue]</em>, [Year]
+
+                  <br>
+
+                  <a href="#">paper</a> /
+                  <a href="#">code</a> /
+                  <a href="#">video</a>
+
+                  <p>
+                    [One-sentence description of the data-driven modeling and
+                    closed-loop control contribution.]
+                  </p>
+                </td>
+
+              </tr>
+
+
+              <!-- ---- PAPER 5: Hamlyn Medical Robotics ---- -->
+              <tr>
+
+                <td class="research-image">
+                  <div class="one" onmouseout="paper5_stop()" onmouseover="paper5_start()">
+
+                    <div class="two" id="paper5_image">
+                      <img src="images/hamlyn_after.gif" alt="Contact sensing with concentric tube robots">
+                    </div>
+
+                    <img src="images/hamlyn_before.jpg" alt="Contact sensing with concentric tube robots">
+                  </div>
+
+                  <script type="text/javascript">
+                    function paper5_start() {
+                      document.getElementById('paper5_image').style.opacity = "1";
+                    }
+
+                    function paper5_stop() {
+                      document.getElementById('paper5_image').style.opacity = "0";
+                    }
+
+                    paper5_stop();
+                  </script>
+                </td>
+
+                <td class="research-text">
+                  <a href="#">
+                    <papertitle>
+                      Touching is Believing: Contact Sensing to Enhance Situational
+                      Awareness for Concentric Tube Robots
+                    </papertitle>
+                  </a>
+
+                  <br>
+
+                  <strong>Nithin S. Kumar</strong>,
+                  Jason A. Shrand,
+                  Susheela Sharma,
+                  S. Duke Herrell III,
+                  Nicholas L. Kavoussi,
+                  Ahmed Ghazi,
+                  Eric J. Barth,
+                  Ipek Oguz,
+                  Alan Kuntz,
+                  Robert J. Webster III
+
+                  <br>
+
+                  <em>Hamlyn Symposium on Medical Robotics (HSMR)</em>, 2025
+
+                  <br>
+
+                  <a href="#">paper</a> /
+                  <a href="#">video</a>
+
+                  <p>
+                    Impedance-based contact sensing enables a concentric tube robot
+                    to collect tissue surface points for robot-to-anatomy registration,
+                    providing an additional source of information for situational
+                    awareness in robot-assisted surgery.
+                  </p>
+                </td>
+
+              </tr>
+
+
 
             </tbody>
           </table>

@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Nithin Kumar</title>
-  <meta name="author" content="Nithin Kumar">
+  <title>Nithin S. Kumar</title>
+  <meta name="author" content="Nithin S. Kumar">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
     const savedTheme = localStorage.getItem("theme");
@@ -34,6 +34,7 @@
       ☾
     </button>
   </div>
+
   <table
     style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tbody>
@@ -49,31 +50,29 @@
 
                 <td style="padding:0%;width:63%;vertical-align:middle">
                   <p style="text-align:center">
-                    <name>Nithin Kumar</name>
+                    <name>Nithin S. Kumar</name>
                   </p>
+
                   <p>
                     I am a PhD student in Mechanical Engineering at
-                    <a href="https://www.vanderbilt.edu">Vanderbilt University</a>, where I work with
-                    <a href="https://engineering.vanderbilt.edu/bio/eric-barth/">Prof. Eric J. Barth</a>.
-                    I develop models and controllers that make highly compliant, underactuated robots
-                    move accurately and dynamically in real time &mdash; combining first-principles
-                    mechanics with data-driven system identification, and validating everything on
-                    hardware I design and build.
+                    <a href="https://www.vanderbilt.edu">Vanderbilt University</a>, where I work in the
+                    <a href="https://my.vanderbilt.edu/dces/people/current/">C* Controls Lab</a>.
                   </p>
                   <p>
-                    My broader interest is in bridging physics-based and learned models for control of
-                    high-dimensional, compliant systems: retaining enough structure to reason about
-                    stability, observability, and energy consistency, while using data to capture what
-                    first principles cannot. My long-term goal is to close the gap between what compliant robots can
-                    physically do and what we can reliably command them to do. That means moving past quasi-static,
-                    free-space control and leveraging compliance for stable, dexterous
-                    interaction in unstructured environments.
+
+                    My research involves developing models and controllers for dynamic, real-time control of soft and
+                    continuum robots,
+                    combining first-principles mechanics with data-driven system identification and validating
+                    these methods on hardware I design and build. My broader goal is to bridge physics-based and
+                    learned models to enable stable, dexterous interaction in unstructured environments.
                   </p>
+
                   <p>
-                    I hold an S.M. in Mechanical Engineering from <a href="https://www.mit.edu">MIT</a>, M.S. in
-                    Robotics Engineering from <a href="https://www.wpi.edu/">WPI</a>,
+                    I hold an S.M. in Mechanical Engineering from <a href="https://www.mit.edu">MIT</a>,
+                    an M.S. in Robotics Engineering from <a href="https://www.wpi.edu/">WPI</a>,
                     and a B.E. in Mechanical Engineering from Vanderbilt University.
                   </p>
+
                   <p style="text-align:center">
                     <a href="mailto:nithin.s.kumar@vanderbilt.edu">Email</a> &nbsp;/&nbsp;
                     <a
@@ -84,8 +83,8 @@
                 </td>
 
                 <td style="padding:2.5%;width:37%;max-width:37%">
-                  <a href="images/nithin.jpg">
-                    <img src="images/nithin.jpg" alt="Nithin Kumar"
+                  <a href="images/nithin2.PNG">
+                    <img src="images/nithin2.PNG" alt="Nithin Kumar"
                       style="width:100%;max-width:100%;object-fit:cover;border-radius:8px;">
                   </a>
                 </td>
@@ -96,6 +95,7 @@
 
         </td>
       </tr>
+
 
       <!-- ============ RESEARCH ============ -->
       <tr style="padding:0px">
@@ -112,6 +112,7 @@
                   </div>
                 </td>
               </tr>
+
 
               <!-- ---- PAPER 1: Control-Oriented Learning ---- -->
               <tr>
@@ -146,7 +147,7 @@
 
                 <td class="research-text">
 
-                  <a href="#">
+                  <a href="https://arxiv.org/abs/2608.25171">
                     <papertitle>
                       Control-Oriented Learning for Dynamic Tracking and Stability Analysis of Soft Pneumatic Actuators
                     </papertitle>
@@ -159,19 +160,20 @@
 
                   <br>
 
-                  <!-- <em>IEEE Robotics and Automation Letters (RA-L)</em>, [Year] -->
+                  <em>Currently Under Review</em>
 
-                  <!-- <br> -->
-                  <em>Currently Under Review:</em> 
+                  <br>
 
-                  <a href="https://arxiv.org/abs/2608.25171">arXiv</a> 
+                  <a href="https://www.youtube.com/watch?v=pqksGDW3yv0">Video</a>
 
                   <p>
-                    A control-oriented learning framework combines a nonlinear static model
-                    with learned residual dynamics for real-time 3D control of soft pneumatic
-                    actuators. Experiments achieve ~1 mm RMSE at 10 mm/s and &lt;10 mm RMSE
-                    at 100 mm/s, while enabling stable user-guided motion exceeding 25 m/s²
-                    peak acceleration and real-time obstacle avoidance.
+                    We develop a control-oriented learning framework that combines a nonlinear static model
+                    with learned residual dynamics for real-time 3D control of soft pneumatic actuators.
+                    Experiments achieve <strong>~1 mm RMSE at 10 mm/s</strong> and &lt;10 mm RMSE at 100 mm/s,
+                    while enabling stable user-guided motion exceeding <strong>25 m/s² peak acceleration</strong>
+                    and real-time obstacle avoidance. The learned model also
+                    <strong>predicts closed-loop stability</strong>, successfully distinguishing stable,
+                    marginally stable, and unstable behavior prior to deployment.
                   </p>
 
                 </td>
@@ -183,6 +185,7 @@
               <tr>
 
                 <td class="research-image">
+
                   <div class="one" onmouseout="paper2_stop()" onmouseover="paper2_start()">
 
                     <div class="two" id="paper2_image">
@@ -190,6 +193,7 @@
                     </div>
 
                     <img src="images/tmech_circle_obs.png" alt="Discrete elastic rod control">
+
                   </div>
 
                   <script type="text/javascript">
@@ -203,11 +207,15 @@
 
                     paper2_stop();
                   </script>
+
                 </td>
 
                 <td class="research-text">
-                  <a href="#">
-                    <papertitle>Task-space model-based control of pneumatic soft actuators</papertitle>
+
+                  <a href="https://arxiv.org/abs/2608.27186">
+                    <papertitle>
+                      Task-space model-based control of pneumatic soft actuators
+                    </papertitle>
                   </a>
 
                   <br>
@@ -217,30 +225,29 @@
 
                   <br>
 
-                  <em>IEEE/ASME Transactions on Mechatronics</em>, [Year]
-
-                  <br>
-
-                  <a href="#">paper</a> /
-                  <a href="#">arXiv</a> /
-                  <a href="#">code</a> /
-                  <a href="#">video</a>
+                  <em>Currently Under Review</em>
 
                   <p>
-                    A sparse, non-minimal discrete elastic rod model enables real-time
-                    dynamic task-space control of soft pneumatic actuators without
-                    data-driven model training. A 10-rod model and observer run at 1 kHz,
-                    achieving 1.5–2.3 mm RMSE on precision trajectories and stable
-                    tracking up to 2 Hz and 37 cm/s.
+                    We extend a planar discrete elastic rod model for real-time dynamic task-space
+                    control of soft pneumatic actuators. The sparse formulation efficiently handles
+                    holonomic and nonholonomic constraints, enabling a 10-rod model and observer to
+                    run at <strong>1 kHz</strong> while achieving <strong>~2 mm RMSE</strong> on precision
+                    trajectories and stable tracking up to <strong>2 Hz and 37 cm/s</strong>.
+                    We demonstrate model generalizability across three different actuator geometries,
+                    real-time tracking of user-generated references, and observer-based control that
+                    reduces tip-tracking error by <strong>45% on average without direct tip sensing</strong>.
                   </p>
+
                 </td>
 
               </tr>
+
 
               <!-- ---- PAPER 3: Wheeled Soft Robot ---- -->
               <tr>
 
                 <td class="research-image">
+
                   <div class="one" onmouseout="paper3_stop()" onmouseover="paper3_start()">
 
                     <div class="two" id="paper3_image">
@@ -248,6 +255,7 @@
                     </div>
 
                     <img src="images/wsr_before.png" alt="Wheeled soft robot">
+
                   </div>
 
                   <script type="text/javascript">
@@ -261,12 +269,17 @@
 
                     paper3_stop();
                   </script>
+
                 </td>
 
                 <td class="research-text">
-                  <a href="#">
-                    <papertitle>Constrained Lagrangian-Based, Nonholonomic Modeling and Validation of a Pneumatically
-                      Actuated Wheeled Soft Robot</papertitle>
+
+                  <a
+                    href="https://asmedigitalcollection.asme.org/mechanismsrobotics/article/18/4/041002/1230451/Constrained-Lagrangian-Based-Nonholonomic-Modeling">
+                    <papertitle>
+                      Constrained Lagrangian-Based, Nonholonomic Modeling and Validation of a Pneumatically
+                      Actuated Wheeled Soft Robot
+                    </papertitle>
                   </a>
 
                   <br>
@@ -280,27 +293,28 @@
 
                   <br>
 
-                  <a href="https://asmedigitalcollection.asme.org/mechanismsrobotics/article/18/4/041002/1230451/Constrained-Lagrangian-Based-Nonholonomic-Modeling">Paper</a> /
                   <a href="https://www.youtube.com/watch?v=FhSIh9JZ4hs">Video</a>
-                  <!-- <a href="#">code</a> /
-                  <a href="#">video</a> -->
 
                   <p>
-                    A constrained Lagrangian model incorporating holonomic and nonholonomic
-                    constraints captures the highly dynamic locomotion of a pneumatically
-                    actuated wheeled soft robot. The robot achieves speeds up to 22 cm/s
-                    (1.38 body lengths/s) and demonstrates forward, reverse, and circular
-                    locomotion, with the model reproducing configuration and velocity trends
-                    across three robot designs.
+                    We develop a constrained Lagrangian model to capture the highly dynamic, non-holonomic based
+                    locomotion of a pneumatically actuated
+                    wheeled soft robot. The robot achieves speeds up to <strong>22 cm/s (1.38 body lengths/s)</strong>
+                    and demonstrates forward, reverse,
+                    and circular locomotion. We validate the modeling framework across
+                    <strong>three different robot designs</strong>, accurately reproducing their
+                    experimentally observed configuration and velocity trends.
                   </p>
+
                 </td>
 
               </tr>
+
 
               <!-- ---- PAPER 4: Data-Driven Soft Robot Control ---- -->
               <tr>
 
                 <td class="research-image">
+
                   <div class="one" onmouseout="paper4_stop()" onmouseover="paper4_start()">
 
                     <div class="two" id="paper4_image">
@@ -308,6 +322,7 @@
                     </div>
 
                     <img src="images/aldsc_before.png" alt="Data-driven soft robot control">
+
                   </div>
 
                   <script type="text/javascript">
@@ -321,12 +336,16 @@
 
                     paper4_stop();
                   </script>
+
                 </td>
 
                 <td class="research-text">
-                  <a href="#">
-                    <papertitle>Data-driven dynamic modeling and control of pneumatic soft actuators with stability
-                      analysis</papertitle>
+
+                  <a href="papers/aldsc.pdf">
+                    <papertitle>
+                      Data-driven dynamic modeling and control of pneumatic soft actuators with stability
+                      analysis
+                    </papertitle>
                   </a>
 
                   <br>
@@ -336,22 +355,18 @@
 
                   <br>
 
-                  <em>American Control Conference / ALDSC / [Venue]</em>, [Year]
-
-                  <br>
-
-                  <a href="#">paper</a> /
-                  <a href="#">code</a> /
-                  <a href="#">video</a>
+                  <em>ASME Letters in Dynamic Systems and Control</em>, 2026
 
                   <p>
-                    A control-oriented learning framework combines a sparse nonlinear
-                    feedforward map with EDMDc residual dynamics, enabling data-driven
-                    feedback control and model-based stability prediction without explicit
-                    first-principles dynamics. Experiments achieve 1.8–2.5 mm RMSE on
-                    shape-rich trajectories and &lt;10 mm RMSE at tip speeds up to
-                    104 mm/s.
+                    We develop a data-driven modeling framework that combines a nonlinear
+                    feedforward map with EDMDc residual dynamics for control of
+                    soft pneumatic actuators. Experiments achieve <strong>2 mm RMSE</strong>
+                    on shape-rich trajectories and <strong>&lt;10 mm RMSE at tip speeds exceeding
+                      100 mm/s</strong>. The learned model also enables
+                    <strong>closed-loop stability prediction</strong> without requiring an explicit
+                    first-principles dynamic model.
                   </p>
+
                 </td>
 
               </tr>
@@ -361,6 +376,7 @@
               <tr>
 
                 <td class="research-image">
+
                   <div class="one" onmouseout="paper5_stop()" onmouseover="paper5_start()">
 
                     <div class="two" id="paper5_image">
@@ -368,6 +384,7 @@
                     </div>
 
                     <img src="images/hamlyn_before.png" alt="Contact sensing with concentric tube robots">
+
                   </div>
 
                   <script type="text/javascript">
@@ -381,10 +398,13 @@
 
                     paper5_stop();
                   </script>
+
                 </td>
 
                 <td class="research-text">
-                  <a href="#">
+
+                  <a
+                    href="https://www.hamlynsymposium.org/wp-content/uploads/2025/10/HSMR25-Proceedings-Final-Reduced.pdf">
                     <papertitle>
                       Touching is Believing: Contact Sensing to Enhance Situational
                       Awareness for Concentric Tube Robots
@@ -408,27 +428,23 @@
 
                   <em>Hamlyn Symposium on Medical Robotics (HSMR)</em>, 2025
 
-                  <br>
-
-                  <a href="#">paper</a> /
-                  <a href="#">video</a>
-
                   <p>
-                    Impedance-based contact sensing enables a concentric tube robot to
-                    collect tissue surface points for robot-to-anatomy registration during
-                    endoscopic procedures. Experiments in an anthropomorphic prostate
-                    phantom achieve a mean surface registration error of
-                    2.11 &plusmn; 1.01 mm, demonstrating touch sensing as an additional
-                    source of information for surgical situational awareness.
+                    We develop an impedance-based contact sensing method that enables a concentric tube
+                    robot to collect tissue surface points for robot-to-anatomy registration during
+                    endoscopic procedures. Experiments in an <strong>anthropomorphic prostate phantom</strong>
+                    achieve a mean surface registration error of
+                    <strong>2.11 &plusmn; 1.01 mm</strong>, demonstrating contact sensing as an
+                    additional source of information for improving situational awareness in
+                    robot-assisted surgery.
                   </p>
+
                 </td>
 
               </tr>
 
-
-
             </tbody>
           </table>
+
 
           <!-- ============ FOOTER ============ -->
           <table
@@ -437,8 +453,8 @@
               <tr>
                 <td style="padding:0px">
                   <br>
-                  <p style="text-align:right;font-size:small;">
-                    Template borrowed from <a href="https://jonbarron.info">Jon Barron</a>.
+                  <p class="footer">
+                    Template adopted from <a href="https://jonbarron.info">Jon Barron</a>.
                   </p>
                 </td>
               </tr>

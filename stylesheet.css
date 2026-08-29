@@ -320,8 +320,17 @@ span.highlight {
    Footer
    ========================= */
 
-.footer {
+/* .footer {
   text-align: right;
   font-size: small;
   margin-top: 50px;
+} */
+
+.footer {
+  text-align: right;
+  font-size: 12px;
+}
+
+.footer a {
+  font-size: inherit;
 }
